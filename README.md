@@ -2,8 +2,8 @@
 Segundo parcial
 
 INTEGRANTES:
-Maria Eugenia Pereyra
-Cristian Facundo Varela
-Lautaro Riveiro
-Ignacio Nahuel Boccasile
-Sebastián Javier Pagano
+<br/>Maria Eugenia Pereyra -
+<br/>Cristian Facundo Varela -
+<br/>Lautaro Riveiro -
+<br/>Ignacio Nahuel Boccasile -
+<br/>Sebastián Javier Pagano
