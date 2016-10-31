@@ -1,5 +1,36 @@
-<ion-view view-title="Browse">
-  <ion-content>
-    <h1>Browse</h1>
+<ion-view view-title="Solicitar Ayuda">
+  <ion-content>  
+  	<form id="formAlta" style="width:50%; text-align: center; margin: auto;">
+		<div class="list" >			
+		  <label class="item item-input item-select">
+		    <div class="input-label">
+		      Tipo de ayuda
+		    </div>
+		    <select>
+		      <option>Accidente</option>
+		      <option selected>Ambulancia</option>
+		      <option>Animal Suelto</option>
+		      <option>Avería Vehículo</option>
+		    </select>
+		  </label>
+		  <ion-item> <h3>Dirección</h3>
+		  <label class= "item item-input">
+		  <input name= "Calle" placeholder="Calle" type="text">
+		  </label>
+		  <label class= "item item-input">
+		  <input name= "Número" placeholder="Número" type="number">
+		  </label>
+		</ion-item>
+		</div>
+		<ion-item> <h3>Descripción</h3>
+		  <label class= "item item-input">
+		  	<textarea name="Text1" cols="40" rows="5" placeholder="Descripción de su ayuda"></textarea>
+		  </label>
+		</ion-item>
+		<ion-item>
+		<button class="button button-balanced" ng-click"Ayuda()">
+			Solicitar Ayuda</button>
+		</ion-item>
+	</form>
   </ion-content>
 </ion-view>
