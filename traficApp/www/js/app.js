@@ -36,7 +36,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/alarmas',
     views: {
       'menuContent': {
-        templateUrl: 'templates/alarmas.html'
+        templateUrl: 'templates/alarmas.html',
+        controller: 'alarmasCtrl'
       }
     }
   })
