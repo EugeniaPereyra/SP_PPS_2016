@@ -42,14 +42,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.solicitarAyuda', {
+      url: '/solicitarAyuda',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/solicitarAyuda.html',
+          controller: 'solicitarAyudaCtrl'
         }
       }
     })
+
     .state('app.playlists', {
       url: '/playlists',
       views: {

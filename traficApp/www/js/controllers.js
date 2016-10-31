@@ -67,5 +67,8 @@ $scope.AnimalSuelto = function() {
 
 })
 
+.controller('solicitarAyudaCtrl', function($scope, $stateParams) {
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
