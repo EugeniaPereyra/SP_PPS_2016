@@ -48,6 +48,9 @@ angular
             case "Accidente":
               item.icon = "Accidente.png";
               break;
+            case "Mecanico":
+              item.icon = "Mecanico.png";
+              break;
             case "Animal-Suelto":
               item.icon = "Animal.png";
               break;

@@ -25,6 +25,15 @@ angular.module('alarma.controllers', [])
 		}
 	 };
 
+	 $scope.Mecanico = function() {
+	    if (navigator.geolocation) {
+		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
+		    $scope.alarma.tipo="Mecanico";		        
+		} else {
+		    console.log("Geolocation is not supported by this browser.");
+		}
+	 };
+
 	$scope.AnimalSuelto = function() {
 	    if (navigator.geolocation) {
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
