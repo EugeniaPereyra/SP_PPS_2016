@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "ngmap": "^1.17.8",
-    "angularfire": "^2.1.0"
+    "angularfire": "^2.1.0",
+    "ngCordova": "^0.1.27-alpha"
   }
 }
