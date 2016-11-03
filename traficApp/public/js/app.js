@@ -8,7 +8,10 @@ angular.module('starter', [
   'ionic', 
   'starter.controllers',
   'alarma.controllers',
-  'ayuda.controllers'
+  'mapa.controllers',
+  'reclamos.controllers',
+  'AlarmaService',
+  'ngMap'
   ])
 
 .run(function($ionicPlatform) {
@@ -58,15 +61,28 @@ angular.module('starter', [
     }
   })
 
-  .state('app.solicitarAyuda', {
-      url: '/solicitarAyuda',
+
+  .state('app.mapa', {
+      url: '/mapa',
+      cache: false,
       views: {
         'menuContent': {
-          templateUrl: 'templates/solicitarAyuda.html',
-          controller: 'solicitarAyudaCtrl'
+          templateUrl: 'templates/mapaAlarmas.html',
+          controller: 'mapaCtrl'
         }
       }
-    });
+    })
+
+    .state('app.reclamar', {
+      url: '/reclamar',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/reclamos.html',
+          controller: 'reclamosCtrl'
+        }
+      }
+    })
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/alarmas');
 });
