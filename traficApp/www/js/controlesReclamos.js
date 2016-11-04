@@ -5,6 +5,11 @@ angular.module('reclamos.controllers', [])
 
 	$scope.reclamos = [];
 	$scope.option;
+	$scope.datos={};
+	$scope.datos.option;
+	$scope.datos.calle;
+	$scope.datos.numero;
+	$scope.datos.desc;
 	$scope.selectables = ["Ambulancia", "Accidente", "Animal Suelto", "Mecanico"];
 	var refReclamos = new Firebase("https://traficapp.firebaseio.com/reclamos");
 
@@ -19,10 +24,11 @@ angular.module('reclamos.controllers', [])
 
 
 	$scope.Enviar = function() {
-		console.info($scope.option);
+
 		firebase.database().ref("/reclamos/").push({
 		Usuario: "Cristian",
-		TipoDeAyuda: $scope.option
+		TipoDeAyuda: $scope.datos.option,
+		Calle: $scope.datos.calle + " " + $scope.datos.numero		
 		})
 
 	 }
