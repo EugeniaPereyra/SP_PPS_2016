@@ -28,7 +28,8 @@ angular.module('reclamos.controllers', [])
 		firebase.database().ref("/reclamos/").push({
 		Usuario: "Cristian",
 		TipoDeAyuda: $scope.datos.option,
-		Calle: $scope.datos.calle + " " + $scope.datos.numero		
+		Calle: $scope.datos.calle + " " + $scope.datos.numero,
+		Reclamo: $scope.datos.desc
 		})
 
 	 }
