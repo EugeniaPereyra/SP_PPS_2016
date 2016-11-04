@@ -1,18 +1,13 @@
 <ion-view view-title="Alarmas">
-  <ion-content style="width:50%; text-align: center; margin: auto;">
+  <ion-content style="width:100%; background: url(img/FondoAl.jpg) no-repeat center;background-size:cover;">
   	<ion-list>
-  		<button class= "button button-full button-assertive ion-model-s" ng-click="Accidente()">
-  			Accidente
-  		</button>
-  		<button class= "button button-full button-calm ion-ios-paw" ng-click="AnimalSuelto()">
-  			Animal Suelto
-  		</button> 
-  		<button class= "button button-full button-balanced ion-medkit" ng-click="Ambulancia()">
-  			Ambulancia
-  		</button>
-      <button class= "button button-full button-dark ion-wrench" ng-click="Mecanico()">
-        Mecanico
-      </button>
+		<br><br></br>
+		<div align="center">
+		<img src="img/AlarmaAccidente.png" ng-click="Accidente()" width="90" height="60" class="animated bounceInLeft"></img><br><br></br>
+		<img src="img/AlarmaAnimal.png" ng-click="AnimalSuelto()" width="80" height="60" class="animated bounceInDown"></img><br><br></br>
+		<img src="img/AlarmaAmbulancia.png" ng-click="Ambulancia()" width="90" height="60" class="animated bounceInRight"></img><br><br></br>
+		<img src="img/AlarmaMecanico.png" ng-click="Mecanico()" width="80" height="60" class="animated bounceInUp"></img>
+		</div>
   	<ion-list>
   </ion-content>
 </ion-view>

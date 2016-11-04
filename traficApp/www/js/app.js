@@ -40,6 +40,26 @@ angular.module('starter', [
         }, function(msg){
             console.log( 'Error: ' + msg );
         });
+		
+		 window.plugins.NativeAudio.preloadSimple('Accidente', 'sonidosAlarmas/Accidente.mp3', function(msg){
+        }, function(msg){
+            console.log( 'Error: ' + msg );
+        });
+		
+	  window.plugins.NativeAudio.preloadSimple('Ambulancia', 'sonidosAlarmas/Ambulancia.mp3', function(msg){
+        }, function(msg){
+            console.log( 'Error: ' + msg );
+        });
+		
+	  window.plugins.NativeAudio.preloadSimple('Animal', 'sonidosAlarmas/Animal.mp3', function(msg){
+        }, function(msg){
+            console.log( 'Error: ' + msg );
+        });
+		
+	  window.plugins.NativeAudio.preloadSimple('Mecanico', 'sonidosAlarmas/Mecanico.mp3', function(msg){
+        }, function(msg){
+            console.log( 'Error: ' + msg );
+        });
     }
   });
 })
