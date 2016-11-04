@@ -12,7 +12,8 @@ angular.module('starter', [
   'reclamos.controllers',
   'AlarmaService',
   'ngMap',
-  'ngCordova'
+  'ngCordova',
+  'ionic-modal-select'
   ])
 
 .run(function($ionicPlatform) {
