@@ -1,4 +1,4 @@
-<ion-modal-view>
+<ion-view view-title="Login">
   <ion-header-bar>
     <h1 class="title">Login</h1>
     <div class="buttons">
@@ -6,7 +6,7 @@
     </div>
   </ion-header-bar>
   <ion-content>
-    <form id="FormLogin" name="FormLogin" ng-if="!Funciona" enctype="multipart/form-data" novalidate>
+    <form id="FormLogin" name="FormLogin" ng-if="!Funciona" enctype="multipart/form-data" align="center" novalidate>
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Username</span>
@@ -14,7 +14,7 @@
           <span ng-if="!FormLogin.username.$invalid">✔</span>
        
         </label>
-        <span ng-if="FormLogin.username.$invalid">*Este campo es requerido</span>
+        <span ng-if="FormLogin.username.$invalid && FormLogin.username.$dirty">*Este campo es requerido</span>
 
         <label class="item item-input">
           <span class="input-label">Password</span>
@@ -22,14 +22,23 @@
           <span ng-if="!FormLogin.password.$invalid">✔</span>
           <br>
         </label>
-        <span ng-if="FormLogin.password.$invalid">*Este campo es requerido</span>
-        <label class="item">
-          <button ng-if="!FormLogin.$invalid" class="button button-block button-positive" ng-click="LoginGitHub()">Log in</button>
-        </label>
-      </div>
+        <span ng-if="FormLogin.password.$invalid && FormLogin.password.$dirty">*Este campo es requerido</span>
+
+        <label style="color:red;" ng-if="NoFunciona">
+            Usuario o Clave Incorrecta
+        </label></br>
+
+      <label class="item">
+        <button ng-if="!FormLogin.$invalid" ng-click="Login()" class="button button-block button-positive">Log in</button>
+      </label>
+
     </form>
-    <div ng-show="Funciona">
-      Se ha Logiado Exitosamente!!!
-    </div>
+        <a style="cursor: pointer" ng-click="LoginGitHub()">Iniciarse con GitHub</a>
+
+      <!--<label align="center"  style="color:green;" ng-if="Funciona">
+        Se ha Logiado Satisfactoriamente!!!
+      </label>-->
+
+
   </ion-content>
-</ion-modal-view>
+</ion-view>
