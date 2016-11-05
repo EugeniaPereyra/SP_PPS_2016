@@ -87,6 +87,7 @@ angular.module('starter', [
 
   .state('app.mapa', {
       url: '/mapa',
+      cache: false,
       views: {
         'menuContent': {
           templateUrl: 'templates/mapaAlarmas.html',

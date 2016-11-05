@@ -1,18 +1,15 @@
-<ion-view view-title="Alarmas">
-  <ion-content>
-    <br>
+<ion-view view-title="Mapa de Alarmas">
+  <ion-content scroll="false">
+  <br/>
   <div>
-    <ng-map center="[{{mapa.latitud}}, {{mapa.longitud}}]" zoom-to-include-markers="auto">
-
+    <ng-map center="[{{mapa.latitud}}, {{mapa.longitud}}]" zoom-to-include-markers="auto" style="height: 425px">
         <custom-marker ng-repeat="m in mapaMarcadores" position="{{m.latitud}},{{m.longitud}}" >
           <div>
             {{m.tipo}}<br/>
-            <img width='50px' ng-src="../img/{{m.icono}}" />
+            <img width='50px' ng-src="./img/{{m.icono}}" />
           </div>
         </custom-marker>
-
     </ng-map>
   </div>
-
   </ion-content>
 </ion-view>

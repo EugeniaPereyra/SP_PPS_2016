@@ -11,7 +11,9 @@ angular.module('starter', [
   'mapa.controllers',
   'reclamos.controllers',
   'AlarmaService',
-  'ngMap'
+  'ngMap',
+  'ngCordova',
+  'ionic-modal-select'
   ])
 
 .run(function($ionicPlatform) {
@@ -26,6 +28,28 @@ angular.module('starter', [
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
+    }
+
+    if( window.plugins && window.plugins.NativeAudio ) {		
+		 window.plugins.NativeAudio.preloadSimple('Accidente', 'sonidosAlarmas/Accidente.mp3', function(msg){
+        }, function(msg){
+            console.log( 'Error: ' + msg );
+        });
+		
+	  window.plugins.NativeAudio.preloadSimple('Ambulancia', 'sonidosAlarmas/Ambulancia.mp3', function(msg){
+        }, function(msg){
+            console.log( 'Error: ' + msg );
+        });
+		
+	  window.plugins.NativeAudio.preloadSimple('Animal', 'sonidosAlarmas/Animal.mp3', function(msg){
+        }, function(msg){
+            console.log( 'Error: ' + msg );
+        });
+		
+	  window.plugins.NativeAudio.preloadSimple('Mecanico', 'sonidosAlarmas/Mecanico.mp3', function(msg){
+        }, function(msg){
+            console.log( 'Error: ' + msg );
+        });
     }
   });
 })
@@ -42,7 +66,6 @@ angular.module('starter', [
 
     .state('app.login', {
       url: '/login',
-      cache:false,
       views: {
         'menuContent': {
           templateUrl: 'templates/login.html',
