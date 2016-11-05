@@ -30,17 +30,7 @@ angular.module('starter', [
       StatusBar.styleDefault();
     }
 
-    if( window.plugins && window.plugins.NativeAudio ) {
-      window.plugins.NativeAudio.preloadSimple('si', 'audio/si.mp3', function(msg){
-        }, function(msg){
-            console.log( 'Error: ' + msg );
-        });
-
-      window.plugins.NativeAudio.preloadSimple('no', 'audio/no.mp3', function(msg){
-        }, function(msg){
-            console.log( 'Error: ' + msg );
-        });
-		
+    if( window.plugins && window.plugins.NativeAudio ) {		
 		 window.plugins.NativeAudio.preloadSimple('Accidente', 'sonidosAlarmas/Accidente.mp3', function(msg){
         }, function(msg){
             console.log( 'Error: ' + msg );
@@ -76,7 +66,6 @@ angular.module('starter', [
 
     .state('app.login', {
       url: '/login',
-      cache:false,
       views: {
         'menuContent': {
           templateUrl: 'templates/login.html',
@@ -98,7 +87,6 @@ angular.module('starter', [
 
   .state('app.mapa', {
       url: '/mapa',
-      cache: false,
       views: {
         'menuContent': {
           templateUrl: 'templates/mapaAlarmas.html',

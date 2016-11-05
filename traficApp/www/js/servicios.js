@@ -4,6 +4,8 @@ angular
 
   .service('Alarmas',['$firebaseArray',
     function($firebaseArray){
+      var ref = firebase.database().ref('alarmas/');
+      var alarmas = $firebaseArray(ref);
 
       this.cargarAlarma = cargarAlarma;
       this.getAlarmas = getAlarmas;
@@ -11,9 +13,6 @@ angular
 
 
       function cargarAlarma(objeto){
-        var ref = firebase.database().ref('alarmas/');
-        var alarmas = $firebaseArray(ref);
-
         return alarmas.$add(objeto)
           .then(function(ref){
             return ref.key
@@ -24,14 +23,10 @@ angular
       }
 
       function getAlarmas(){
-        var ref = firebase.database().ref('alarmas/');
-        var alarmas = $firebaseArray(ref);
         return alarmas;
       }
 
       function getAlarmasMarcadores(){
-        var ref = firebase.database().ref('alarmas/');
-        var alarmas = $firebaseArray(ref);
         return alarmas.$loaded(function(data){
           return agregarIconos(data);
         }, function(e){
