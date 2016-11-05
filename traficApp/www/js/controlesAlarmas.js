@@ -91,6 +91,7 @@ angular.module('alarma.controllers', [])
 		setTimeout(function() {
 			$scope.alarma.latitud=posicion.coords.latitude;
 			$scope.alarma.longitud=posicion.coords.longitude;
+			$scope.alarma.fecha = Firebase.ServerValue.TIMESTAMP;
 			Alarmas.cargarAlarma($scope.alarma);
 			console.info($scope.alarma);
 		} );
