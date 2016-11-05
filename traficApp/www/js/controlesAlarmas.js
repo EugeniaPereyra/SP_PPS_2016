@@ -96,4 +96,4 @@ angular.module('alarma.controllers', [])
 			console.info($scope.alarma);
 		} );
 	}
-});
+}); 

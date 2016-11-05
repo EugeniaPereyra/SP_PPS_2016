@@ -13,7 +13,8 @@ angular.module('starter', [
   'AlarmaService',
   'ngMap',
   'ngCordova',
-  'ionic-modal-select'
+  'ionic-modal-select',
+  'ionic-ratings'
   ])
 
 .run(function($ionicPlatform) {
