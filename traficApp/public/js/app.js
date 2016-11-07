@@ -13,7 +13,8 @@ angular.module('starter', [
   'AlarmaService',
   'ngMap',
   'ngCordova',
-  'ionic-modal-select'
+  'ionic-modal-select',
+  'ionic-ratings'
   ])
 
 .run(function($ionicPlatform) {
@@ -64,14 +65,11 @@ angular.module('starter', [
     controller: 'AppCtrl'
   })
 
-    .state('app.login', {
-      url: '/login',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/login.html',
-          controller: 'AppCtrl'
-        }
-      }
+    .state('login', {
+      url: '/',
+      templateUrl: 'templates/login.html',
+      controller: 'AppCtrl'
+      
     })
 
   .state('app.alarmas', {

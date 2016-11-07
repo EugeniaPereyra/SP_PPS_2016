@@ -1,6 +1,5 @@
 'use strict';
-angular
-  .module('AlarmaService', ['firebase'])
+angular.module('AlarmaService', ['firebase'])
 
   .service('Alarmas',['$firebaseArray',
     function($firebaseArray){

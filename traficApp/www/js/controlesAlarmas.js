@@ -1,6 +1,6 @@
 angular.module('alarma.controllers', [])
 
-.controller('alarmasCtrl', function($scope, Alarmas, $cordovaNativeAudio,$ionicPopup, $cordovaVibration) {
+.controller('alarmasCtrl', function($scope, Alarmas, $cordovaNativeAudio,$ionicPopup, $cordovaVibration, $cordovaGeolocation) {
 
  	$scope.alarma={};
 	$scope.alarma.latitud="";
@@ -16,7 +16,20 @@ angular.module('alarma.controllers', [])
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
 		    $scope.alarma.tipo="Ambulancia";		        
 		} else {
-		    console.log("Geolocation is not supported by this browser.");
+			try
+			{
+		      var posOptions = {timeout: 10000, enableHighAccuracy: false};
+			  $cordovaGeolocation.getCurrentPosition(posOptions)
+			    .then(function (position) {
+			      $scope.obtenerPosicion(position);
+			    }, function(err) {
+			      console.log(err);
+			    });
+			}
+			catch(Exception)
+			{
+				console.log(Exception.Message);
+			}
 		}
 		
 		try
@@ -40,7 +53,20 @@ angular.module('alarma.controllers', [])
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
 		    $scope.alarma.tipo="Accidente";		        
 		} else {
-		    console.log("Geolocation is not supported by this browser.");
+		    try
+			{
+		      var posOptions = {timeout: 10000, enableHighAccuracy: false};
+			  $cordovaGeolocation.getCurrentPosition(posOptions)
+			    .then(function (position) {
+			      $scope.obtenerPosicion(position);
+			    }, function(err) {
+			      console.log(err);
+			    });
+			}
+			catch(Exception)
+			{
+				console.log(Exception.Message);
+			}
 		}
 		
 		try
@@ -64,7 +90,20 @@ angular.module('alarma.controllers', [])
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
 		    $scope.alarma.tipo="Mecanico";		        
 		} else {
-		    console.log("Geolocation is not supported by this browser.");
+		    try
+			{
+		      var posOptions = {timeout: 10000, enableHighAccuracy: false};
+			  $cordovaGeolocation.getCurrentPosition(posOptions)
+			    .then(function (position) {
+			      $scope.obtenerPosicion(position);
+			    }, function(err) {
+			      console.log(err);
+			    });
+			}
+			catch(Exception)
+			{
+				console.log(Exception.Message);
+			}
 		}
 		
 		try
@@ -88,7 +127,20 @@ angular.module('alarma.controllers', [])
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
 		    $scope.alarma.tipo="Animal-Suelto";		        
 		} else {
-		    console.log("Geolocation is not supported by this browser.");
+		    try
+			{
+		      var posOptions = {timeout: 10000, enableHighAccuracy: false};
+			  $cordovaGeolocation.getCurrentPosition(posOptions)
+			    .then(function (position) {
+			      $scope.obtenerPosicion(position);
+			    }, function(err) {
+			      console.log(err);
+			    });
+			}
+			catch(Exception)
+			{
+				console.log(Exception.Message);
+			}
 		}
 		
 		try
