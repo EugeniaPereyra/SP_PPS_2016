@@ -1,30 +1,48 @@
 angular.module('mapa.controllers', [])
 
-.controller('mapaCtrl', function($scope, Alarmas) {
+.controller('mapaCtrl', function($scope, Alarmas, $timeout) {
 
     $scope.mapa = {};
     $scope.mapa.latitud = "-34.662189";
     $scope.mapa.longitud = "-58.364643";
     $scope.mapaMarcadores = [];
 
-    $scope.mostrarMapa = function(){
-        $scope.mapaMarcadores.length = 0;
-        Alarmas.getAlarmasMarcadores()
-        .then(function(data){
-            console.info(data);
-            data.map(function(item){
-              console.log(item);
-              $scope.mapaMarcadores.push(
-                {
-                  tipo: item.tipo,
-                  latitud: item.latitud,
-                  longitud: item.longitud,
-                  icono: item.icon
-                })
-            })
-          })
-      };
+    var refAlarmas = firebase.database().ref('alarmas/');
 
-      $scope.mostrarMapa();
+    refAlarmas.on('child_added', function(snapshot){
+        $timeout(function(){
+          var alarma = snapshot.val();
+          //console.log(alarma);
+          agregarIconos(alarma);
+          $scope.mapaMarcadores.push(
+          {
+              tipo: alarma.tipo,
+              latitud: alarma.latitud,
+              longitud: alarma.longitud,
+              icono: alarma.icon
+          })
+
+        });
+    }); 
+
+    function agregarIconos(alarma){
+          switch (alarma.tipo) {
+            case "Ambulancia":
+              alarma.icon = "Ambulancia.png";
+              break;
+            case "Accidente":
+              alarma.icon = "Accidente.png";
+              break;
+            case "Mecanico":
+              alarma.icon = "Mecanico.png";
+              break;
+            case "Animal-Suelto":
+              alarma.icon = "Animal.png";
+              break;
+            default:
+              alarma.icon = "Accidente.png";
+
+          }
+        }   
 
 });
