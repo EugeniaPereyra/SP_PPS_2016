@@ -5,18 +5,21 @@
       <button class="button button-clear">Close</button>
     </div>
   </ion-header-bar>
-  <ion-content>
+  <ion-content scroll="false"; style="width:100%; background: url(img/fondoLogout.jpg) no-repeat center;background-size:cover;">
+  <br></br>
     <form id="FormLogout" align="center" >
 
-      <label>¿Seguro que desea cerrar sesion?</label>  
+      <div align="center" class="animated bounceInLeft"><label><h2><font color="white">¿Seguro que desea cerrar sesion?</font></h2></label></div>  <br></br>
 
-      <label class="item">
-        <button ng-click="LogOut()" class="button button-block button-positive"> Si</button>
+      <div class="animated bounceInRight">
+	  <label class="item">
+        <button ng-click="LogOut()" class="button button-block button-balanced"> Si</button>
       </label>
       <label class="item">
-        <button ng-click="Seguir()" class="button button-block button-positive"> No</button>
+        <button ng-click="Seguir()" class="button button-block button-assertive"> No</button>
       </label>
     </form>
+	</div>
   
   </ion-content>
 </ion-view>

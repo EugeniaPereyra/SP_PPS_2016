@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', function($scope, $ionicModal, $timeout,$state) {
 
-
+  $scope.banderita = true;
   $scope.loginData = {};
   $scope.loginData.username = "admin@admin.com";
   $scope.loginData.password = "123456";
@@ -16,6 +16,8 @@ angular.module('starter.controllers', [])
    .then(function(Respuesta){
     $timeout(function(){
       $scope.Funciona = true;
+	  $scope.banderita = false;
+	  $scope.bandera = true;
       console.log("Respuesta: ", Respuesta);  
       $state.go("app.mapa");
         });          

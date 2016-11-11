@@ -1,19 +1,26 @@
 <ion-view view-title="Generar Reclamos">
-  <ion-content>  
+  <ion-content scroll="false"; style="width:100%; background: url(img/Calle.jpg) no-repeat center;background-size:cover;">   
+  <br></br>
+  <div class="animated bounceInDown">
   	<form id="formAlta" style="width:50%; text-align: center; margin: auto;">
 		<div class="list" >	
 		<ion-item> <h3>Valora nuestra aplicación</h3>
 		<ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
   		</ion-item>
-		  	<button class="button button-positive" modal-select ng-model="datos.option" options="selectables" modal-title="Seleccione el tipo de ayuda">
+		<br>
+		  	<button class="button button-block button-positive" modal-select ng-model="datos.option" options="selectables" modal-title="Seleccione el tipo de ayuda">
 			    Tipo de Reclamo
 			    <div class="option" ng-model="datos.option">
 			        {{option}}
 			    </div>
 			</button>
+			
+			
 			<div class="item item-text-wrap">
 				    {{datos.option}}
 			</div>
+			<br>
+			
 		  </label>
 		  <ion-item> <h3>Descripción</h3>
 		  <label class= "item item-input">
@@ -21,10 +28,11 @@
 		  </label>
 		</ion-item>		
 		<ion-item>
-		<button class="button button-balanced" ng-click="Enviar()">
+		<button class="button button-block button-balanced" ng-click="Enviar()">
 			Guardar</button>
 		</ion-item>
 	</form>
+	</div>
   </ion-content>
 </ion-view>
 

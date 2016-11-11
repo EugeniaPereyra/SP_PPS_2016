@@ -1,7 +1,7 @@
 <ion-view view-title="Mapa de Alarmas">
-  <ion-content scroll="false">
-  <br/>
-  <div>
+  <ion-content scroll="false"; style="width:100%; background: url(img/Espacio.jpg) no-repeat center;background-size:cover;">
+  <br></br>
+  <div class="animated bounceInUp">
     <ng-map center="[{{mapa.latitud}}, {{mapa.longitud}}]" zoom-to-include-markers="auto" style="height: 425px">
         <custom-marker ng-repeat="m in mapaMarcadores" position="{{m.latitud}},{{m.longitud}}" >
           <div>

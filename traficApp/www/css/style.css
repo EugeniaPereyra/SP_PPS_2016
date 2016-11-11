@@ -3208,3 +3208,12 @@ Copyright (c) 2014 Daniel Eden
 .custom a {
   color: white;  /*Text color for each item, overrides the color property above*/
 }
+
+.fondoLogin
+{
+	background-image: url(fondoLogin.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+	text-align: center;
+}
