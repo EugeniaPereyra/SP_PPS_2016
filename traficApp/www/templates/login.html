@@ -1,11 +1,4 @@
-<ion-view view-title="Login">
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear">Close</button>
-    </div>
-  </ion-header-bar>
-  <ion-content>
+
     <form id="FormLogin" name="FormLogin" ng-if="!Funciona" enctype="multipart/form-data" align="center" novalidate>
       <div class="list">
         <label class="item item-input">
@@ -31,14 +24,5 @@
       <label class="item">
         <button ng-if="!FormLogin.$invalid" ng-click="Login()" class="button button-block button-positive">Log in</button>
       </label>
-
+       <a style="cursor: pointer" ng-click="LoginGitHub()">Iniciarse con GitHub</a>
     </form>
-        <a style="cursor: pointer" ng-click="LoginGitHub()">Iniciarse con GitHub</a>
-
-      <!--<label align="center"  style="color:green;" ng-if="Funciona">
-        Se ha Logiado Satisfactoriamente!!!
-      </label>-->
-
-
-  </ion-content>
-</ion-view>
