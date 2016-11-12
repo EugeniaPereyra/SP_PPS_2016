@@ -7,6 +7,8 @@
 angular.module('starter', [
   'ionic', 
   'starter.controllers',
+  'menu.controllers',
+  'logout.controllers',
   'alarma.controllers',
   'mapa.controllers',
   'reclamos.controllers',
@@ -66,10 +68,19 @@ angular.module('starter', [
   })
 
     .state('login', {
-      url: '/',
+      url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'AppCtrl'
-      
+      controller: 'LoginCtrl'    
+    })
+
+    .state('app.logout', {
+      url: '/logout',
+      views: {
+        'menuContent': {
+        templateUrl: 'templates/logout.html',
+        controller: 'LogoutCtrl'
+        }
+      }
     })
 
   .state('app.alarmas', {
@@ -81,6 +92,7 @@ angular.module('starter', [
       }
     }
   })
+
 
 
   .state('app.mapa', {
@@ -105,5 +117,5 @@ angular.module('starter', [
     })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/alarmas');
+  $urlRouterProvider.otherwise('/login');
 });

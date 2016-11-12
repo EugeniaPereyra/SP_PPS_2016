@@ -1,6 +1,6 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
-    <ion-nav-bar class="bar-assertive">
+    <ion-nav-bar class="bar-positive">
       <ion-nav-back-button>
       </ion-nav-back-button>
 
@@ -14,23 +14,25 @@
 
   <ion-side-menu side="left" class="custom">
     <ion-header-bar class="bar-positive">
-      <h1 class="title">traficApp</h1>
+      <h1 class="title">TraficApp</h1>
     </ion-header-bar>
-    <ion-content>
+    <ion-content scroll="false">
       <ion-list>
-        <ion-item menu-close  class="it">
-          LogOut
+        <ion-item menu-close href="#/app/logout">
+		  <div align="center"><img src="img/Logout.png" width="30" height="30"></img><font> &nbsp LogOut &nbsp </font><img src="img/Logout.png" width="30" height="30"></img></div>
         </ion-item>
-        <ion-item menu-close href="#/app/alarmas" class="it2">
-          Alarmas
+        <ion-item menu-close href="#/app/alarmas">
+           <div align="center"><img src="img/Alarma.png" width="30" height="30"></img> &nbsp Alarmas &nbsp <img src="img/Alarma.png" width="30" height="30"></img></div>
         </ion-item>
-        <ion-item menu-close href="#/app/mapa" class="it3">
-          Mapa de Alarmas
+        <ion-item menu-close href="#/app/mapa">
+           <div align="center"><img src="img/Satelite.png" width="30" height="30"></img> &nbsp Mapa de Alarmas &nbsp <img src="img/Satelite.png" width="30" height="30"></img></div>
         </ion-item>
-        <ion-item menu-close href="#/app/reclamar" class="it4">
-          Generar Reclamos
+        <ion-item menu-close href="#/app/reclamar">
+         <div align="center"><img src="img/Cana.png" width="30" height="30"></img> &nbsp Generar Reclamos &nbsp <img src="img/Cana.png" width="30" height="30"></img></div>
         </ion-item>
       </ion-list>
+	   </br>
+	  <div align="center"><img src="img/Autos.png" width="200" height="200"></img></div>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
