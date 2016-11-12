@@ -70,7 +70,8 @@ angular.module('starter', [
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'LoginCtrl'    
+      controller: 'LoginCtrl',
+	  cache: false
     })
 
     .state('app.logout', {

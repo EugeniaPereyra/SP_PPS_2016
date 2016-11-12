@@ -7,11 +7,12 @@
   </ion-header-bar>
   <ion-content scroll="false"; style="width:100%; background: url(img/fondoLogout.jpg) no-repeat center;background-size:cover;">
   <br></br>
-    <form id="FormLogout" align="center" >
+  <div align="center">
+    <form id="FormLogout" style="width:50%">
 
       <div align="center" class="animated bounceInLeft"><label><h2><font color="white">¿Seguro que desea cerrar sesion?</font></h2></label></div>  <br></br>
 
-      <div class="animated bounceInRight">
+      <div class="animated bounceInRight" align="center">
 	  <label class="item">
         <button ng-click="LogOut()" class="button button-block button-balanced"> Si</button>
       </label>
@@ -20,6 +21,8 @@
       </label>
     </form>
 	</div>
+	</div>
+	
   
   </ion-content>
 </ion-view>
