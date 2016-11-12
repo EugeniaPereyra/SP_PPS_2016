@@ -8,7 +8,6 @@ angular.module('starter', [
   'ionic', 
   'starter.controllers',
   'menu.controllers',
-  'logout.controllers',
   'alarma.controllers',
   'mapa.controllers',
   'reclamos.controllers',
@@ -72,16 +71,6 @@ angular.module('starter', [
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl',
 	  cache: false
-    })
-
-    .state('app.logout', {
-      url: '/logout',
-      views: {
-        'menuContent': {
-        templateUrl: 'templates/logout.html',
-        controller: 'LogoutCtrl'
-        }
-      }
     })
 
   .state('app.alarmas', {
