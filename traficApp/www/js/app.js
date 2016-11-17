@@ -15,7 +15,9 @@ angular.module('starter', [
   'ngMap',
   'ngCordova',
   'ionic-modal-select',
-  'ionic-ratings'
+  'ionic-ratings',
+  'grafico.controllers',
+  'directivaGrafico'
   ])
 
 .run(function($ionicPlatform) {
@@ -102,6 +104,16 @@ angular.module('starter', [
         'menuContent': {
           templateUrl: 'templates/reclamos.html',
           controller: 'reclamosCtrl'
+        }
+      }
+    })
+
+    .state('app.grafico', {
+      url: '/grafico',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/grafico.html',
+          controller: 'graficoCtrl'
         }
       }
     })
