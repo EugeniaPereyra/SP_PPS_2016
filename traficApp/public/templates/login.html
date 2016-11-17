@@ -1,41 +1,37 @@
 <div class="fondoLogin">
 <div class="animated bounceInRight">
     </br>
-	<div align="center" ng-if="banderita==true"><img src="img/Candado.png" width="100" height="100"></img><h2><font color="white">DEBE LOGUEARSE PARA CONTINUAR!!</font></h2></div>
+	<div align="center"><img src="img/Candado.png" width="50" height="50"></img><h4><font color="white" class="cursiva">DEBE LOGUEARSE PARA CONTINUAR!!</font></h4></div>
 	</div>
-	<div align="center" ng-if="bandera==true" class="animated bounceInRight">
-	<br><br><br><br><br><br><br><br></br>
-	<img src="img/Stop.ico" width="100" height="100"></img><h2><font color="white">USTED YA SE ENCUENTRA LOGUEADO!!</font></h2>
-	</div>
-	<br></br>
+	</br>
 	<div class="animated bounceInLeft">
-	<form id="FormLogin" name="FormLogin" ng-if="!Funciona" enctype="multipart/form-data" align="center" novalidate>
+	<form id="FormLogin" name="FormLogin" ng-if="!Funciona" enctype="multipart/form-data" novalidate>
       <div class="list">
-        <label class="item item-input">
-          <span class="input-label"><img src="img/Username.png" width="50" height="50"></img><br>Username</span>
+        <label class="item item-input" align="center">
+          <span class="input-label"><img src="img/Username.png" width="20" height="20"></img><br><font class="cursiva">Usuario</font></span>
           <input name="username" type="text" ng-model="loginData.username" value="" required> 
-          <span ng-if="!FormLogin.username.$invalid">✔</span>
+          <span ng-if="!FormLogin.username.$invalid">✔&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
        
         </label>
         <span ng-if="FormLogin.username.$invalid && FormLogin.username.$dirty">*Este campo es requerido</span>
 
         <label class="item item-input">
-          <span class="input-label"><img src="img/Clave.png" width="50" height="50"></img><br>Password</span>
+          <span class="input-label"><img src="img/Clave.png" width="20" height="20"></img><br><font class="cursiva">Clave</font></span>
           <input  name="password" type="password" ng-model="loginData.password" value="" required> 
-          <span ng-if="!FormLogin.password.$invalid">✔</span>
+          <span ng-if="!FormLogin.password.$invalid">✔&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
           <br>
         </label>
-        <span ng-if="FormLogin.password.$invalid && FormLogin.password.$dirty">*Este campo es requerido</span>
+        <span ng-if="FormLogin.password.$invalid && FormLogin.password.$dirty"><font color="red">*Este campo es requerido</font></span>
 
         <label style="color:red;" ng-if="NoFunciona">
             Usuario o Clave Incorrecta
-        </label></br>
+        </label>
 
       <label class="item">
-        <button ng-if="!FormLogin.$invalid" ng-click="Login()" class="button button-block button-positive"><div align="center"><img src="img/CandadoLogin.png" width="50" height="50"></img> &nbsp Log in &nbsp <img src="img/CandadoLogin.png" width="50" height="50"></img></div></button>
+        <button ng-if="!FormLogin.$invalid" ng-click="Login()" class="button button-block button-positive"><div align="center"><img src="img/CandadoLogin.png" width="20" height="20"></img><font class="cursiva"> &nbsp Log in &nbsp </font><img src="img/CandadoLogin.png" width="20" height="20"></img></div></button>
       </label>
 	  <label class="item">
-       <button class="button button-block button-balanced" ng-click="LoginGitHub()"><div align="center"><img src="img/Github.png" width="50" height="50"></img> &nbsp Iniciarse con GitHub &nbsp <img src="img/Github.png" width="50" height="50"></div></button>
+       <button class="button button-block button-balanced" ng-click="LoginGitHub()"><div align="center"><img src="img/Github.png" width="20" height="20"></img><font class="cursiva"> &nbsp Iniciarse con GitHub &nbsp </font><img src="img/Github.png" width="20" height="20"></div></button>
 	   </label>
     </form>
 	</div>

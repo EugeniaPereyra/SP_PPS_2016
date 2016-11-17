@@ -1,7 +1,7 @@
-angular.module('reclamos.controllers', [])
+angular.module('reclamos.controllers', ['ngCordova'])
 
 
-.controller('reclamosCtrl', function($scope, $stateParams, $timeout) {
+.controller('reclamosCtrl', function($scope, $stateParams, $timeout, $cordovaVibration) {
 
 	$scope.reclamos = [];
 	$scope.option;
@@ -39,6 +39,14 @@ angular.module('reclamos.controllers', [])
       }
 
 	$scope.Enviar = function() {
+	
+	try{
+	$cordovaVibration.vibrate(200);
+   }
+   
+   catch(Exception){
+	console.log(Exception.Message);
+   }
 
 		firebase.database().ref("/reclamos/").push({
 		Usuario: "Cristian",

@@ -1,14 +1,20 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordova'])
 
-.controller('LoginCtrl', function($scope, $ionicModal, $timeout,$state) {
+.controller('LoginCtrl', function($scope, $ionicModal, $timeout,$state,$cordovaVibration) {
 
-  $scope.banderita = true;
   $scope.loginData = {};
   $scope.loginData.username = "admin@admin.com";
   $scope.loginData.password = "123456";
 
   $scope.Login = function()
   { 
+  try{
+	$cordovaVibration.vibrate(200);
+   }
+   
+   catch(Exception){
+	console.log(Exception.Message);
+   }
    $scope.Funciona = false;
   $scope.NoFunciona = false;  
 
@@ -16,8 +22,6 @@ angular.module('starter.controllers', [])
    .then(function(Respuesta){
     $timeout(function(){
       $scope.Funciona = true;
-	  $scope.banderita = false;
-	  $scope.bandera = true;
       console.log("Respuesta: ", Respuesta);  
       $state.go("app.mapa");
         });          
@@ -32,6 +36,13 @@ angular.module('starter.controllers', [])
 
 
   $scope.LoginGitHub = function() {
+  try{
+	$cordovaVibration.vibrate(200);
+   }
+   
+   catch(Exception){
+	console.log(Exception.Message);
+   }
     $scope.Funciona = false;
   $scope.NoFunciona = false;  
   

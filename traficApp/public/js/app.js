@@ -8,7 +8,6 @@ angular.module('starter', [
   'ionic', 
   'starter.controllers',
   'menu.controllers',
-  'logout.controllers',
   'alarma.controllers',
   'mapa.controllers',
   'reclamos.controllers',
@@ -16,7 +15,9 @@ angular.module('starter', [
   'ngMap',
   'ngCordova',
   'ionic-modal-select',
-  'ionic-ratings'
+  'ionic-ratings',
+  'grafico.controllers',
+  'directivaGrafico'
   ])
 
 .run(function($ionicPlatform) {
@@ -70,17 +71,8 @@ angular.module('starter', [
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'LoginCtrl'    
-    })
-
-    .state('app.logout', {
-      url: '/logout',
-      views: {
-        'menuContent': {
-        templateUrl: 'templates/logout.html',
-        controller: 'LogoutCtrl'
-        }
-      }
+      controller: 'LoginCtrl',
+	  cache: false
     })
 
   .state('app.alarmas', {
@@ -112,6 +104,16 @@ angular.module('starter', [
         'menuContent': {
           templateUrl: 'templates/reclamos.html',
           controller: 'reclamosCtrl'
+        }
+      }
+    })
+
+    .state('app.grafico', {
+      url: '/grafico',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/grafico.html',
+          controller: 'graficoCtrl'
         }
       }
     })

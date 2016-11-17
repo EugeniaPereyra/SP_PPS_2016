@@ -1,15 +1,15 @@
 <ion-view view-title="Generar Reclamos">
   <ion-content scroll="false"; style="width:100%; background: url(img/Calle.jpg) no-repeat center;background-size:cover;">   
-  <br></br>
+  </br>
   <div class="animated bounceInDown">
-  	<form id="formAlta" style="width:50%; text-align: center; margin: auto;">
+  	<form id="formAlta" style="width:75%; text-align: center; margin: auto;">
 		<div class="list" >	
-		<ion-item> <h3>Valora nuestra aplicación</h3>
+		<ion-item> <h3><font class="cursiva">Valora nuestra aplicación</font></h3>
 		<ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
   		</ion-item>
 		<br>
 		  	<button class="button button-block button-positive" modal-select ng-model="datos.option" options="selectables" modal-title="Seleccione el tipo de ayuda">
-			    Tipo de Reclamo
+			    <font class="cursiva">Tipo de Reclamo</font>
 			    <div class="option" ng-model="datos.option">
 			        {{option}}
 			    </div>
@@ -22,14 +22,14 @@
 			<br>
 			
 		  </label>
-		  <ion-item> <h3>Descripción</h3>
+		  <ion-item> <h3><font class="cursiva">Descripción</font></h3>
 		  <label class= "item item-input">
 		  	<textarea name="Text1" cols="40" rows="5" placeholder="Descripción de su ayuda" ng-model="datos.desc"></textarea>
 		  </label>
 		</ion-item>		
 		<ion-item>
 		<button class="button button-block button-balanced" ng-click="Enviar()">
-			Guardar</button>
+			<font class="cursiva">Guardar</font></button>
 		</ion-item>
 	</form>
 	</div>

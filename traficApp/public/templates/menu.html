@@ -14,21 +14,24 @@
 
   <ion-side-menu side="left" class="custom">
     <ion-header-bar class="bar-positive">
-      <h1 class="title">TraficApp</h1>
+      <div align="center"><h1 class="title"><font class="cursiva">TraficApp</font></h1></div>
     </ion-header-bar>
     <ion-content scroll="false">
       <ion-list>
-        <ion-item menu-close href="#/app/logout">
-		  <div align="center"><img src="img/Logout.png" width="30" height="30"></img><font> &nbsp LogOut &nbsp </font><img src="img/Logout.png" width="30" height="30"></img></div>
+        <ion-item menu-close ng-click="LogOut()">
+		  <div align="center"><img src="img/Logout.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp LogOut &nbsp </font><img src="img/Logout.png" width="30" height="30"></img></div>
         </ion-item>
         <ion-item menu-close href="#/app/alarmas">
-           <div align="center"><img src="img/Alarma.png" width="30" height="30"></img> &nbsp Alarmas &nbsp <img src="img/Alarma.png" width="30" height="30"></img></div>
+           <div align="center"><img src="img/Alarma.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Alarmas &nbsp </font><img src="img/Alarma.png" width="30" height="30"></img></div>
         </ion-item>
         <ion-item menu-close href="#/app/mapa">
-           <div align="center"><img src="img/Satelite.png" width="30" height="30"></img> &nbsp Mapa de Alarmas &nbsp <img src="img/Satelite.png" width="30" height="30"></img></div>
+           <div align="center"><img src="img/Satelite.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Mapa de Alarmas &nbsp </font><img src="img/Satelite.png" width="30" height="30"></img></div>
         </ion-item>
         <ion-item menu-close href="#/app/reclamar">
-         <div align="center"><img src="img/Cana.png" width="30" height="30"></img> &nbsp Generar Reclamos &nbsp <img src="img/Cana.png" width="30" height="30"></img></div>
+         <div align="center"><img src="img/Cana.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Generar Reclamos &nbsp </font><img src="img/Cana.png" width="30" height="30"></img></div>
+        </ion-item>
+        <ion-item menu-close href="#/app/grafico">
+         <div align="center"><img src="img/Cana.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Gráfico &nbsp </font><img src="img/Cana.png" width="30" height="30"></img></div>
         </ion-item>
       </ion-list>
 	   </br>
