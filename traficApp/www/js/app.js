@@ -17,7 +17,8 @@ angular.module('starter', [
   'ionic-modal-select',
   'ionic-ratings',
   'grafico.controllers',
-  'directivaGrafico'
+  'directivaGrafico',
+  'ReclamoService'
   ])
 
 .run(function($ionicPlatform) {
@@ -64,6 +65,7 @@ angular.module('starter', [
     .state('app', {
     url: '/app',
     abstract: true,
+    cache: false,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
@@ -114,6 +116,16 @@ angular.module('starter', [
         'menuContent': {
           templateUrl: 'templates/grafico.html',
           controller: 'graficoCtrl'
+        }
+      }
+    })
+
+    .state('app.reclamos', {
+      url: '/reclamos',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/mostrar.html',
+          controller: 'reclamosMostrarCtrl'
         }
       }
     })

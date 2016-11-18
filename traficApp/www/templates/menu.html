@@ -1,8 +1,7 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="true">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-positive">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
+
 
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
@@ -30,6 +29,9 @@
         <ion-item menu-close href="#/app/reclamar">
          <div align="center"><img src="img/Cana.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Generar Reclamos &nbsp </font><img src="img/Cana.png" width="30" height="30"></img></div>
         </ion-item>
+        </ion-item>
+        <ion-item menu-close href="#/app/reclamos" ng-show="UsuarioLogueado.email=='admin@admin.com'">
+         <div align="center"><img src="img/Cana.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Mostrar Reclamos &nbsp </font><img src="img/Cana.png" width="30" height="30"></img></div>
         </ion-item>
         <ion-item menu-close href="#/app/grafico">
          <div align="center"><img src="img/Cana.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Gráfico &nbsp </font><img src="img/Cana.png" width="30" height="30"></img></div>

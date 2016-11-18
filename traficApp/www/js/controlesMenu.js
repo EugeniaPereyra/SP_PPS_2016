@@ -2,6 +2,9 @@ angular.module('menu.controllers', [])
 
 .controller('AppCtrl', function($state,$scope) {
 
+	$scope.UsuarioLogueado=firebase.auth().currentUser;
+	console.info($scope.UsuarioLogueado.email);
+
   $scope.LogOut = function(){
 
     firebase.auth().signOut().catch(function(Error){
