@@ -3,7 +3,6 @@ angular.module('grafico.controllers', [])
 .controller('graficoCtrl', function($scope, Alarmas) {
   // Sample options for first chart
   var alarmas=[];
-  alarmas=Alarmas.getAlarmas();
   $scope.mecanico=0;
   $scope.animal=0;
   $scope.accidente=0;
