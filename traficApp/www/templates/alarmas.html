@@ -3,10 +3,34 @@
   	<ion-list>
 		<br><br></br>
 		<div align="center">
-		<a style="cursor: pointer"><img src="img/AlarmaAccidente.png" ng-click="Accidente()" width="90" height="60" class="animated bounceInLeft"></img></a><br><br></br>
-		<a style="cursor: pointer"><img src="img/AlarmaAnimal.png" ng-click="AnimalSuelto()" width="80" height="60" class="animated bounceInDown"></img></a><br><br></br>
-		<a style="cursor: pointer"><img src="img/AlarmaAmbulancia.png" ng-click="Ambulancia()" width="90" height="60" class="animated bounceInRight"></img></a><br><br></br>
-		<a style="cursor: pointer"><img src="img/AlarmaMecanico.png" ng-click="Mecanico()" width="80" height="60" class="animated bounceInUp"></img></a>
+
+		<a style="cursor: pointer" modal-select on-select="Accidente()" ng-model="datos.option" options="selectablesAccidente" modal-title="Seleccione el tipo de Accidente"><img src="img/AlarmaAccidente.png" width="90" height="60" class="animated bounceInLeft"></img>
+			<font class="cursiva"></font>
+			    <div class="option" ng-model="datos.option">
+			        {{option}}
+			    </div>
+		</a><br><br></br>
+
+		<a style="cursor: pointer" modal-select on-select="AnimalSuelto()" ng-model="datos.option" options="selectablesAnimales" modal-title="Seleccione el tipo de Animal Suelto"><img src="img/AlarmaAnimal.png" width="80" height="60" class="animated bounceInDown"></img>
+			<font class="cursiva"></font>
+			    <div class="option" ng-model="datos.option">
+			        {{option}}
+			    </div>
+		</a><br><br></br>
+
+		<a style="cursor: pointer" modal-select on-select="Ambulancia()" ng-model="datos.option" options="selectablesAmbulancia" modal-title="Seleccione el tipo de gravedad"><img src="img/AlarmaAmbulancia.png" width="90" height="60" class="animated bounceInRight"></img>
+			<font class="cursiva"></font>
+			    <div class="option" ng-model="datos.option">
+			        {{option}}
+			    </div>
+		</a><br><br></br>
+
+		<a style="cursor: pointer" modal-select on-select="Mecanico()" ng-model="datos.option" options="selectablesMecanico" modal-title="Seleccione el tipo de dificultad"><img src="img/AlarmaMecanico.png" width="80" height="60" class="animated bounceInUp"></img>
+			<font class="cursiva"></font>
+			    <div class="option" ng-model="datos.option">
+			        {{option}}
+			    </div>
+		</a>	
 		</div>
   	<ion-list>
   </ion-content>
