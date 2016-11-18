@@ -1,6 +1,6 @@
 angular.module('alarma.controllers', [])
 
-.controller('alarmasCtrl', function($scope, $state, Alarmas, $cordovaNativeAudio, $ionicPopup, $cordovaVibration, $cordovaGeolocation) {
+.controller('alarmasCtrl', function($scope, Alarmas, $cordovaNativeAudio, $ionicPopup, $cordovaVibration, $cordovaGeolocation) {
 
 	$scope.option;
 	$scope.datos={};
@@ -20,7 +20,7 @@ angular.module('alarma.controllers', [])
 		   var alertPopup = $ionicPopup.alert({
 		     title: 'Ambulancia',
 		     template: 'Estamos procesando su solicitud'
-		   })	   
+		   }); 
 
     	if (navigator.geolocation) {
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
@@ -53,7 +53,7 @@ angular.module('alarma.controllers', [])
 		{
 			console.log(Exception.Message);
 		}
-		
+		reload();
   	};
 
 	$scope.Accidente = function() {
@@ -91,6 +91,7 @@ angular.module('alarma.controllers', [])
 		{
 			console.log(Exception.Message);
 		}
+		reload();
 	 };
 
 	 $scope.Mecanico = function() {
@@ -128,6 +129,7 @@ angular.module('alarma.controllers', [])
 		{
 			console.log(Exception.Message);
 		}
+		reload();
 	 };
 
 	$scope.AnimalSuelto = function() {
@@ -165,6 +167,7 @@ angular.module('alarma.controllers', [])
 		{
 			console.log(Exception.Message);
 		}
+		reload();
 	 };
 
 	$scope.obtenerPosicion=function(posicion){
