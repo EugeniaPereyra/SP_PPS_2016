@@ -1,13 +1,15 @@
 <ion-view view-title="Lista de Reclamos">
-  <ion-content style="width:100%; background: url(img/Calle.jpg) no-repeat center;background-size:cover;">   
+  <ion-content style="width:100%; background: url(img/Calles.jpg) no-repeat center;background-size:cover;">   
   </br>
 
   <div class="animated bounceInDown" style="width:75%; text-align: center; margin: auto;">
 
 	  <div ng-repeat="r in reclamos">
-	  	<form style="background-color: white" style="width:75%; text-align: center; margin: auto;">
+	  	<form class="botonReclamo" style="width:75%; text-align: center; margin: auto;">
+		  <font color="white">
 		  <strong>{{r.Reclamo}}<br/></strong>Valoracion: {{r.Valoracion}}<br/>
 		  Usuario: {{r.Usuario}} - Tipo: {{r.TipoDeAyuda}}
+		  </font>
 		  </form>
 		  <br/>
 	  </div>

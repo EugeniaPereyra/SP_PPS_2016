@@ -9,7 +9,7 @@ angular.module('starter.controllers', ['ngCordova'])
   $scope.Login = function()
   { 
     try{
-  	$cordovaVibration.vibrate(200);
+  	$cordovaVibration.vibrate(300);
      }
      
      catch(Exception){

@@ -44,8 +44,8 @@ angular.module('alarma.controllers', [])
 		
 		try
 		{
-			$cordovaVibration.vibrate(2500);
-			$cordovaNativeAudio.play('Ambulancia');			
+			$cordovaVibration.vibrate(300);
+			$cordovaNativeAudio.play('SonidoAmbulancia');			
 			
 		}
 	
@@ -83,8 +83,8 @@ angular.module('alarma.controllers', [])
 		
 		try
 		{
-			$cordovaVibration.vibrate(2200);
-			$cordovaNativeAudio.play('Accidente');
+			$cordovaVibration.vibrate(300);
+			$cordovaNativeAudio.play('SonidoAccidente');
 		}
 		
 		catch(Exception)
@@ -121,8 +121,8 @@ angular.module('alarma.controllers', [])
 		
 		try
 		{
-			$cordovaVibration.vibrate(2500);
-			$cordovaNativeAudio.play('Mecanico');
+			$cordovaVibration.vibrate(300);
+			$cordovaNativeAudio.play('SonidoMecanico');
 		}
 		
 		catch(Exception)
@@ -159,8 +159,8 @@ angular.module('alarma.controllers', [])
 		
 		try
 		{
-			$cordovaVibration.vibrate(2000);
-			$cordovaNativeAudio.play('Animal');
+			$cordovaVibration.vibrate(300);
+			$cordovaNativeAudio.play('SonidoAnimal');
 		}
 		
 		catch(Exception)
