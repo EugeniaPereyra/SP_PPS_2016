@@ -1,6 +1,6 @@
 angular.module('grafico.controllers', ['ngCordova'])
 
-.controller('graficoCtrl', function($scope, Alarmas,$timeout) {
+.controller('graficoCtrl', function($scope, Alarmas, $timeout) {
   // Sample options for first chart
   var alarmas= [];
   $scope.mecanico=0;
@@ -9,23 +9,34 @@ angular.module('grafico.controllers', ['ngCordova'])
   $scope.ambulancia=0;
 
   
+  Alarmas.getAlarmas().then(function(respuesta){
+    alarmas=respuesta;
+    console.log(alarmas.length);
 
-  $scope.DatosFire = new Firebase("https://traficapp.firebaseio.com/alarmas");
+    angular.forEach(alarmas,function(value){
+      //console.log(value);
+      if(value.tipo=="Animal-Suelto")
+      {
+        $scope.animal += 1;
+      }
+      if(value.tipo=="Ambulancia")
+      {
+        $scope.ambulancia += 1;
+      }
+      if(value.tipo=="Accidente")
+      {
+        $scope.accidente += 1;
+      }
+      if(value.tipo=="Mecanico")
+      {
+        $scope.mecanico += 1;
+      }
+    });
+    
 
- $scope.DatosFire.on('child_added', function (snapshot) {
-   
-    var message = snapshot.val();
-    alarmas.push(message.tipo);
-
-    console.log("Adentro",alarmas);
- 
-  $scope.mecanico=4;
- 
-   
-
+    //$scope.chartOptions.series[0].data = [$scope.mecanico, $scope.accidente, $scope.animal, $scope.ambulancia];//data.addPoint($scope.mecanico,true);//= [$scope.mecanico, $scope.accidente, $scope.animal, $scope.ambulancia];
+    //$scope.chartOptions.series[0].update({});
   });
-console.log("Afuera",alarmas);
-console.log("Mecanico",$scope.mecanico)
 
 
 

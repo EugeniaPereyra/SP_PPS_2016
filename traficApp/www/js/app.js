@@ -102,6 +102,7 @@ angular.module('starter', [
 
     .state('app.reclamar', {
       url: '/reclamar',
+      cache: false,
       views: {
         'menuContent': {
           templateUrl: 'templates/reclamos.html',

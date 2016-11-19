@@ -10,6 +10,8 @@ angular.module('directivaGrafico', [])
                     },
                     link: function (scope, element) {
                         Highcharts.chart(element[0], scope.options);
+                        //console.info(element[0]);
+                        //Highcharts.chart.series[0].update(scope.options);
                     }
                 };
             })
