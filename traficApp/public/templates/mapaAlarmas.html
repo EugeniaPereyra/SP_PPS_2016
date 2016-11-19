@@ -6,8 +6,11 @@
     <ng-map center="[{{mapa.latitud}}, {{mapa.longitud}}]" zoom-to-include-markers="auto" style="height: 450px">
         <custom-marker ng-repeat="m in mapaMarcadores" position="{{m.latitud}},{{m.longitud}}" >
           <div>
+            <center>
             <strong>{{m.tipo}}</strong><br/>
+            <label>{{m.descripcion}}</label><br/>
             <img width='50px' ng-src="./img/{{m.icono}}" />
+            </center>
           </div>
         </custom-marker>
     </ng-map>

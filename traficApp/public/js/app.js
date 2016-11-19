@@ -112,6 +112,7 @@ angular.module('starter', [
 
     .state('app.grafico', {
       url: '/grafico',
+      cache: false,
       views: {
         'menuContent': {
           templateUrl: 'templates/grafico.html',
