@@ -2,7 +2,13 @@ angular.module('mapa.controllers', [])
 
 .controller('mapaCtrl', function($scope, Alarmas, $timeout) {
 
-    $scope.mapa = {};
+    $scope.banderita = true;
+	
+	$timeout(function(){
+		 			$scope.banderita = false;
+		 		}, 3000);        
+	
+	$scope.mapa = {};
     $scope.mapa.latitud = "-34.662189";
     $scope.mapa.longitud = "-58.364643";
     $scope.mapaMarcadores = [];

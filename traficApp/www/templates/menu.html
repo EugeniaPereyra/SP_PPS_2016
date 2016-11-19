@@ -1,6 +1,6 @@
 <ion-side-menus enable-menu-with-back-views="true">
   <ion-side-menu-content>
-    <ion-nav-bar class="bar-positive">
+    <ion-nav-bar class="bar-dark">
 
 
       <ion-nav-buttons side="left">
@@ -12,33 +12,32 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left" class="custom">
-    <ion-header-bar class="bar-positive">
+    <ion-header-bar class="bar-dark">
       <div align="center"><h1 class="title"><font class="cursiva">TraficApp</font></h1></div>
     </ion-header-bar>
     <ion-content scroll="false">
       <ion-list>
         <ion-item menu-close ng-click="LogOut()">
-		  <div align="center"><img src="img/Logout.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp LogOut &nbsp </font><img src="img/Logout.png" width="30" height="30"></img></div>
+		  <div align="center"><img src="img/Candado.png" width="20" height="20"></img> &nbsp LogOut &nbsp <img src="img/Candado.png" width="20" height="20"></img></div>
         </ion-item>
         <ion-item menu-close href="#/app/alarmas">
-           <div align="center"><img src="img/Alarma.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Alarmas &nbsp </font><img src="img/Alarma.png" width="30" height="30"></img></div>
+           <div align="center"><img src="img/Alarma.png" width="20" height="20"></img> &nbsp Alarmas &nbsp <img src="img/Alarma.png" width="20" height="20"></img></div>
         </ion-item>
         <ion-item menu-close href="#/app/mapa">
-           <div align="center"><img src="img/Satelite.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Mapa de Alarmas &nbsp </font><img src="img/Satelite.png" width="30" height="30"></img></div>
+           <div align="center"><img src="img/Satelite.png" width="20" height="20"></img> &nbsp Mapa de Alarmas &nbsp <img src="img/Satelite.png" width="20" height="20"></img></div>
         </ion-item>
         <ion-item menu-close href="#/app/reclamar">
-         <div align="center"><img src="img/Cana.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Generar Reclamos &nbsp </font><img src="img/Cana.png" width="30" height="30"></img></div>
+         <div align="center"><img src="img/Cana.png" width="20" height="20"></img> &nbsp Generar Reclamos &nbsp <img src="img/Cana.png" width="20" height="20"></img></div>
         </ion-item>
         </ion-item>
         <ion-item menu-close href="#/app/reclamos" ng-show="UsuarioLogueado.email=='admin@admin.com'">
-         <div align="center"><img src="img/Cana.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Mostrar Reclamos &nbsp </font><img src="img/Cana.png" width="30" height="30"></img></div>
+         <div align="center"><img src="img/Muestro.png" width="20" height="20"></img> &nbsp Mostrar Reclamos &nbsp <img src="img/Muestro.png" width="20" height="20"></img></div>
         </ion-item>
         <ion-item menu-close href="#/app/grafico">
-         <div align="center"><img src="img/Cana.png" width="30" height="30"></img><font class="cursivaMenu"> &nbsp Gráfico &nbsp </font><img src="img/Cana.png" width="30" height="30"></img></div>
+         <div align="center"><img src="img/Graficos.png" width="20" height="20"></img> &nbsp Gráfico &nbsp <img src="img/Graficos.png" width="20" height="20"></img></div>
         </ion-item>
       </ion-list>
-	   </br>
-	  <div align="center"><img src="img/Autos.png" width="200" height="200"></img></div>
+	  
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>

@@ -36,22 +36,22 @@ angular.module('starter', [
     }
 
     if( window.plugins && window.plugins.NativeAudio ) {		
-		 window.plugins.NativeAudio.preloadSimple('Accidente', 'sonidosAlarmas/Accidente.mp3', function(msg){
+		 window.plugins.NativeAudio.preloadSimple('SonidoAccidente', 'sonidosAlarmas/SonidoAccidente.mp3', function(msg){
         }, function(msg){
             console.log( 'Error: ' + msg );
         });
 		
-	  window.plugins.NativeAudio.preloadSimple('Ambulancia', 'sonidosAlarmas/Ambulancia.mp3', function(msg){
+	  window.plugins.NativeAudio.preloadSimple('SonidoAmbulancia', 'sonidosAlarmas/SonidoAmbulancia.mp3', function(msg){
         }, function(msg){
             console.log( 'Error: ' + msg );
         });
 		
-	  window.plugins.NativeAudio.preloadSimple('Animal', 'sonidosAlarmas/Animal.mp3', function(msg){
+	  window.plugins.NativeAudio.preloadSimple('SonidoAnimal', 'sonidosAlarmas/SonidoAnimal.mp3', function(msg){
         }, function(msg){
             console.log( 'Error: ' + msg );
         });
 		
-	  window.plugins.NativeAudio.preloadSimple('Mecanico', 'sonidosAlarmas/Mecanico.mp3', function(msg){
+	  window.plugins.NativeAudio.preloadSimple('SonidoMecanico', 'sonidosAlarmas/SonidoMecanico.mp3', function(msg){
         }, function(msg){
             console.log( 'Error: ' + msg );
         });
@@ -102,7 +102,6 @@ angular.module('starter', [
 
     .state('app.reclamar', {
       url: '/reclamar',
-      cache: false,
       views: {
         'menuContent': {
           templateUrl: 'templates/reclamos.html',
