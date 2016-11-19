@@ -1,6 +1,6 @@
 angular.module('alarma.controllers', [])
 
-.controller('alarmasCtrl', function($scope, Alarmas, $timeout, $cordovaNativeAudio, $ionicPopup, $cordovaVibration, $cordovaGeolocation) {
+.controller('alarmasCtrl', function($scope, $state, Alarmas, $timeout, $cordovaNativeAudio, $ionicPopup, $cordovaVibration, $cordovaGeolocation) {
     
 	$scope.labandera = true;
 	
@@ -21,13 +21,7 @@ angular.module('alarma.controllers', [])
 	$scope.selectablesAmbulancia = ["Herido Grave", "Heridos Grave", "Persona herida"];	
 	$scope.selectablesMecanico = ["Cambio de Rueda", "Sin Batería", "Falla en Motor"];	
 
-
    $scope.Ambulancia = function() {
-		   var alertPopup = $ionicPopup.alert({
-		     title: 'Ambulancia',
-		     template: 'Estamos procesando su solicitud'
-		   }); 
-
     	if (navigator.geolocation) {
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
 		    $scope.alarma.tipo="Ambulancia";		        
@@ -59,14 +53,15 @@ angular.module('alarma.controllers', [])
 		{
 			console.log(Exception.Message);
 		}
-		reload();
   	};
 
+	$scope.Saliendo = function(){
+
+	$state.go("app.mapa");
+
+	};
+
 	$scope.Accidente = function() {
-		   var alertPopup = $ionicPopup.alert({
-		     title: 'Accidente',
-		     template: 'Estamos procesando su solicitud'
-		   })
 	    if (navigator.geolocation) {
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
 		    $scope.alarma.tipo="Accidente";		        
@@ -97,14 +92,9 @@ angular.module('alarma.controllers', [])
 		{
 			console.log(Exception.Message);
 		}
-		reload();
 	 };
 
 	 $scope.Mecanico = function() {
-		   var alertPopup = $ionicPopup.alert({
-		     title: 'Mecanico',
-		     template: 'Estamos procesando su solicitud'
-		   })	 	
 	    if (navigator.geolocation) {
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
 		    $scope.alarma.tipo="Mecanico";		        
@@ -135,14 +125,9 @@ angular.module('alarma.controllers', [])
 		{
 			console.log(Exception.Message);
 		}
-		reload();
 	 };
 
 	$scope.AnimalSuelto = function() {
-		   var alertPopup = $ionicPopup.alert({
-		     title: 'Animal Suelto',
-		     template: 'Estamos procesando su solicitud'
-		   })		
 	    if (navigator.geolocation) {
 		    navigator.geolocation.getCurrentPosition($scope.obtenerPosicion);
 		    $scope.alarma.tipo="Animal-Suelto";		        
@@ -173,7 +158,6 @@ angular.module('alarma.controllers', [])
 		{
 			console.log(Exception.Message);
 		}
-		reload();
 	 };
 
 	$scope.obtenerPosicion=function(posicion){
