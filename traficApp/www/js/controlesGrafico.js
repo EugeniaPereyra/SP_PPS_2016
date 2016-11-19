@@ -88,10 +88,6 @@ $scope.chartConfig = {
         },
   //Whether to use Highstocks instead of Highcharts (optional). Defaults to false.
   useHighStocks: false,
-  size: {
-    width: 700,
-    height: 400
-  },
   
   //function (optional)
   func: function (chart) {

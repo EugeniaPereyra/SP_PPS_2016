@@ -24,7 +24,8 @@ angular.module('mapa.controllers', [])
              tipo: alarma.tipo,
              latitud: alarma.latitud,
              longitud: alarma.longitud,
-             icono: alarma.icon
+             icono: alarma.icon, 
+             descripcion: alarma.descripcion
           })
         });
     }); 

@@ -80,7 +80,7 @@ Segundo parcial
     <li><strong>Maria Eugenia Pereyra:</strong>&nbsp;</li>
     </ul>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Archivos: controlesGrafico.js, controlesMenu.js, controlesReclamos.js, serviciosAlarmas.js, serviciosReclamo.js</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: Grafico para visualizar cantidades de alarmas por tipo, validacion de usuario para visualizar los reclamos</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: Grafico para cantidades de alarmas por tipo, validacion de usuario para visualizar reclamos</p>
 <ul>
     <li><strong>Cristian Facundo Varela</strong>:&nbsp;</li>
 </ul>
@@ -95,5 +95,5 @@ Segundo parcial
     <li><strong>Sebastian Pagano</strong>:&nbsp;</li>
 </ul>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Archivos: controlesLogin.js, login.html, controlesGrafico.js</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: Modificacion en login para su correcto funcionamiento, grafico para cantidades de alarmas por tipo</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: Modificacion en login para correcto funcionamiento, grafico cantidades de alarmas por tipo</p>
 <p><br />LOGROS: grafico con las cantidades de alarmas por tipo, agregado de tipo de alarmas al generar la alarma mejoras en estilos y diseño. <br /><br />FALTANTES: mensajeria con push notification.<br /></p>
