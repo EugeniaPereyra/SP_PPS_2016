@@ -28,7 +28,8 @@
         </label>
 
       <label class="item">
-        <button ng-if="!FormLogin.$invalid" ng-click="Login()" class="button button-block button-positive"><div align="center"><img src="img/CandadoLogin.png" width="20" height="20"></img><font class="cursiva"> &nbsp Log in &nbsp </font><img src="img/CandadoLogin.png" width="20" height="20"></img></div></button>
+        <button ng-if="!FormLogin.$invalid" ng-click="Login()" class="button button-block button-positive"><div align="center"><img src="img/CandadoLogin.png" width="20" height="20"></img><font class="cursiva"> &nbsp Log in &nbsp </font><img src="img/CandadoLogin.png" width="20" height="20"></img></div></button> 
+          <center><ion-spinner  icon="android" ng-if="!funciona"></ion-spinner></center>
       </label>
 
     </form>
