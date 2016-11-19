@@ -1,7 +1,8 @@
-
 <ion-view view-title="Gráfico">
   <ion-content style="width:100%; background: url(img/Elfondito.jpg) no-repeat center;background-size:cover;">
-  <div class="animated bounceInUp">
+  </br>
+  <center><ion-spinner  icon="bubbles" class="spinner spinner-energized" ng-if="altabandera==true" ></ion-spinner></center>
+  <div class="animated bounceInUp" ng-if="altabandera==false">
   </br><center>
        <hc-chart options="chartOptions"></hc-chart>
        </center>

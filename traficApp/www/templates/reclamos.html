@@ -1,7 +1,8 @@
 <ion-view view-title="Generar Reclamos">
   <ion-content style="width:100%; background: url(img/Lacalle.jpg) no-repeat center;background-size:cover;">   
   </br>
-  <div class="animated bounceInDown">
+  <center><ion-spinner  icon="bubbles" class="spinner spinner-energized" ng-if="mibandera==true" ></ion-spinner></center>
+  <div class="animated bounceInDown" ng-if="mibandera==false">
   	<form id="formAlta" style="width:75%; text-align: center; margin: auto;">
 		<div class="list" >	
 		<ion-item style="background: url(img/Elauto.jpg) no-repeat center;background-size:cover;"> <h3><font class="cursiva">Valora nuestra aplicación</font></h3>

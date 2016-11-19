@@ -3,6 +3,12 @@ angular.module('reclamos.controllers', ['ngCordova'])
 
 .controller('reclamosCtrl', function($scope, $stateParams, $timeout, $cordovaVibration, $ionicPopup, $state) {
 
+	$scope.mibandera = true;
+	
+	$timeout(function(){
+		 			$scope.mibandera = false;
+		 		}, 3000);     
+	
 	$scope.reclamos = [];
 	$scope.option;
 	$scope.datos={};
@@ -70,8 +76,13 @@ angular.module('reclamos.controllers', ['ngCordova'])
 
 })
 
-.controller('reclamosMostrarCtrl', function($scope, Reclamos) {
+.controller('reclamosMostrarCtrl', function($scope, $timeout, Reclamos) {
 
+  $scope.estabandera = true;
+	
+	$timeout(function(){
+		 			$scope.estabandera = false;
+		 		}, 3000);     
   $scope.reclamos=[];
 
   Reclamos.getReclamos().then(function(respuesta){

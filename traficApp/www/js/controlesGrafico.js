@@ -1,7 +1,13 @@
 angular.module('grafico.controllers', ['ngCordova'])
 
 .controller('graficoCtrl', function($scope, Alarmas, $timeout) {
-  // Sample options for first chart
+ $scope.altabandera = true;
+	
+	$timeout(function(){
+		 			$scope.altabandera = false;
+		 		}, 3000);     
+
+ // Sample options for first chart
   var alarmas= [];
   $scope.mecanico=0;
   $scope.animal=0;

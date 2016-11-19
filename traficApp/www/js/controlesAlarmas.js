@@ -1,7 +1,13 @@
 angular.module('alarma.controllers', [])
 
-.controller('alarmasCtrl', function($scope, Alarmas, $cordovaNativeAudio, $ionicPopup, $cordovaVibration, $cordovaGeolocation) {
-
+.controller('alarmasCtrl', function($scope, Alarmas, $timeout, $cordovaNativeAudio, $ionicPopup, $cordovaVibration, $cordovaGeolocation) {
+    
+	$scope.labandera = true;
+	
+	$timeout(function(){
+		 			$scope.labandera = false;
+		 		}, 3000);        
+	
 	$scope.option;
 	$scope.datos={};
 	$scope.datos.option;
