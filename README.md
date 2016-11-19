@@ -45,15 +45,15 @@ Segundo parcial
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: creacion del proyecto, estructura de archivos y organizacion, instalacion de plugins necesarios, configuracion y actualizacion de ionic view y firebase hosting, desarrollo del mapa y service para firebase.</p>
 </ul>
 <ul>
-    <li><strong>Cristian Facundo Varela</strong>: desarrollo del alta de alarmas y reclamos. Aplicacion de estilos.</li>
+    <li><strong>Cristian Facundo Varela</strong>: .</li>
     <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Archivos: alarma.html, controlesAlarmas.js, reclamos.html, controlesReclamos.js</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: desarrollo de la valoracion de la aplicacion.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: desarrollo del alta de alarmas y reclamos. Aplicacion de estilos</p>
 </ul>
 <ul>
-    <li><strong>Ignacio Boccacile</strong>:</li>
+    <li><strong>Ignacio Boccacile</strong>:&nbsp;</li>
 </ul>
-    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Archivos: (todos los archivos)</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades:  dise&ntilde;o de la interfaz, aplicacion de estilos, y desarrollo con utilizacion de plugins..</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Archivos: (todos)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: aplicacion de estilos y dise&ntilde;o de la interfaz.</p>
 <ul>
     <li><strong>Sebastian Pagano</strong>: </li>
     </ul>
