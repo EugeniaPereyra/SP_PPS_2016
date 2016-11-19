@@ -40,17 +40,25 @@ Segundo parcial
 <br />
 <strong>Semana 1: 29/10 al 4/11</strong><br />
 <ul>
-    <li><strong>Maria Eugenia Pereyra:</strong> creacion del proyecto, estructura de archivos y organizacion, instalacion de plugins necesarios, configuracion y actualizacion de ionic view y firebase hosting, desarrollo del mapa y service para firebase.</li>
+    <li><strong>Maria Eugenia Pereyra:</strong> </li>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Archivos: app.js, index.html, controlesAlarmaMapa.js, serviciosAlarma.js</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: creacion del proyecto, estructura de archivos y organizacion, instalacion de plugins necesarios, configuracion y actualizacion de ionic view y firebase hosting, desarrollo del mapa y service para firebase.</p>
 </ul>
 <ul>
     <li><strong>Cristian Facundo Varela</strong>: desarrollo del alta de alarmas y reclamos. Aplicacion de estilos.</li>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Archivos: alarma.html, controlesAlarmas.js, reclamos.html, controlesReclamos.js</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: desarrollo de la valoracion de la aplicacion.</p>
 </ul>
 <ul>
-    <li><strong>Ignacio Boccacile</strong>: dise&ntilde;o de la interfaz, aplicacion de estilos, y desarrollo con utilizacion de plugins.</li>
+    <li><strong>Ignacio Boccacile</strong>:</li>
 </ul>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Archivos: (todos los archivos)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades:  dise&ntilde;o de la interfaz, aplicacion de estilos, y desarrollo con utilizacion de plugins..</p>
 <ul>
-    <li><strong>Sebastian Pagano</strong>: desarrolo del login con GitHub.</li>
+    <li><strong>Sebastian Pagano</strong>: </li>
     </ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - controlesLogin.js, login.html</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Funcionalidades: desarrolo del login con GitHub.</p>
 <p><br />LOGROS: visualizacion de alarmas (accidente, averia vehicular, animal suelto y ambulancia) en el mapa en tiempo real. Registro de reclamos.<br /><br />FALTANTES: Mostrar los reclamos, estilos, servicio de mensajeria con push notification y valoracion del cliente por la atencion recibida.<br /></p>
 <p><br /><strong>Semana 2: 5/11 al 11/11</strong><br /></p>
 <ul>
