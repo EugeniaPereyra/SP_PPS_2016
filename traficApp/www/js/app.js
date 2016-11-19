@@ -17,8 +17,8 @@ angular.module('starter', [
   'ionic-modal-select',
   'ionic-ratings',
   'grafico.controllers',
-  'directivaGrafico',
-  'ReclamoService'
+  'ReclamoService',
+  'highcharts-ng'
   ])
 
 .run(function($ionicPlatform) {
