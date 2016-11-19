@@ -5,27 +5,27 @@
 		<center><ion-spinner  icon="bubbles" class="spinner spinner-energized" ng-if="labandera==true" ></ion-spinner></center>
 		<div align="center" ng-if="labandera==false">
 
-		<a style="cursor: pointer" modal-select on-select="Accidente()" ng-model="datos.option" options="selectablesAccidente" modal-title="Seleccione el tipo de Accidente"><img src="img/AlarmaAccidente.png" width="70" height="70" class="animated bounceInLeft"></img>	    
+		<a style="cursor: pointer" modal-select on-select="Accidente()" on-close="Saliendo()" ng-model="datos.option" options="selectablesAccidente" modal-title="Seleccione el tipo de Accidente"><img src="img/AlarmaAccidente.png" width="70" height="70" class="animated bounceInLeft"></img>	    
 				<div class="option" ng-model="datos.option">
 			        <div class="botonModal" align="center">{{option}}</div>
 			    </div> 
 		</a><br></br><br></br>
 
-		<a style="cursor: pointer" modal-select on-select="AnimalSuelto()" ng-model="datos.option" options="selectablesAnimales" modal-title="Seleccione el tipo de Animal Suelto"><img src="img/AlarmaAnimal.png" width="60" height="40" class="animated bounceInDown"></img>
+		<a style="cursor: pointer" modal-select on-select="AnimalSuelto()" on-close="Saliendo()" ng-model="datos.option" options="selectablesAnimales" modal-title="Seleccione el tipo de Animal Suelto"><img src="img/AlarmaAnimal.png" width="60" height="40" class="animated bounceInDown"></img>
 			
 			    <div class="option" ng-model="datos.option">
 			        <div class="botonModal" align="center">{{option}}</div>
 			    </div>
 		</a><br></br><br></br>
 
-		<a style="cursor: pointer" modal-select on-select="Ambulancia()" ng-model="datos.option" options="selectablesAmbulancia" modal-title="Seleccione el tipo de gravedad"><img src="img/AlarmaAmbulancia.png" width="70" height="70" class="animated bounceInRight"></img>
+		<a style="cursor: pointer" modal-select on-select="Ambulancia()" on-close="Saliendo()" ng-model="datos.option" options="selectablesAmbulancia" modal-title="Seleccione el tipo de gravedad"><img src="img/AlarmaAmbulancia.png" width="70" height="70" class="animated bounceInRight"></img>
 			
 			    <div class="option" ng-model="datos.option">
 			        <div class="botonModal" align="center">{{option}}</div>
 			    </div>
 		</a><br></br><br></br>
 
-		<a style="cursor: pointer" modal-select on-select="Mecanico()" ng-model="datos.option" options="selectablesMecanico" modal-title="Seleccione el tipo de dificultad"><img src="img/AlarmaMecanico.png" width="60" height="50" class="animated bounceInUp"></img>
+		<a style="cursor: pointer" modal-select on-select="Mecanico()" on-close="Saliendo()" ng-model="datos.option" options="selectablesMecanico" modal-title="Seleccione el tipo de dificultad"><img src="img/AlarmaMecanico.png" width="60" height="50" class="animated bounceInUp"></img>
 			
 			    <div class="option" ng-model="datos.option">
 			        <div class="botonModal" align="center">{{option}}</div>
