@@ -25,7 +25,7 @@ Segundo parcial
 <li>Botones para generar alarmas de distintos tipos</li>
 <li>Mapa de alarmas para visualizar los lugares de los accidentes</li>
 <li>Generar reclamos y valoraci&oacute;n de la aplicaci&oacute;n</li>
-<li>Gr&aacute;co para la visualizaci&oacute;n de cantidades de las distintas alarmas</li>
+<li>Gr&aacute;fico para la visualizaci&oacute;n de cantidades de las distintas alarmas</li>
 <li>S&oacute;lo el administrador puede ver los reclamos de los usuarios</li>
 <br/>
 <hr />
