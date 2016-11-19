@@ -1,8 +1,14 @@
 angular.module('reclamos.controllers', ['ngCordova'])
 
 
-.controller('reclamosCtrl', function($scope, $stateParams, $timeout, $cordovaVibration) {
+.controller('reclamosCtrl', function($scope, $stateParams, $timeout, $cordovaVibration, $ionicPopup, $state) {
 
+	$scope.mibandera = true;
+	
+	$timeout(function(){
+		 			$scope.mibandera = false;
+		 		}, 3000);     
+	
 	$scope.reclamos = [];
 	$scope.option;
 	$scope.datos={};
@@ -49,12 +55,17 @@ angular.module('reclamos.controllers', ['ngCordova'])
    }
 
 		firebase.database().ref("/reclamos/").push({
-		Usuario: "Cristian",
+		Usuario: firebase.auth().currentUser.email,
 		Valoracion: $scope.datos.valora,
 		TipoDeAyuda: $scope.datos.option,
 		Reclamo: $scope.datos.desc
 		})
+    var alertPopup = $ionicPopup.alert({
+         title: 'Enviado',
+         template: 'Reclamo enviado correctamente'
+       });
 
+    $state.go('app.alarmas');
 	 }
 
 	 $scope.LeerOpc = function(elegido){
@@ -62,5 +73,23 @@ angular.module('reclamos.controllers', ['ngCordova'])
       $scope.Opc = elegido;
        
   	};
+
+})
+
+.controller('reclamosMostrarCtrl', function($scope, $timeout, Reclamos) {
+
+  $scope.estabandera = true;
+	
+	$timeout(function(){
+		 			$scope.estabandera = false;
+		 		}, 3000);     
+  $scope.reclamos=[];
+
+  Reclamos.getReclamos().then(function(respuesta){
+    $scope.reclamos=respuesta;
+    console.info($scope.reclamos);
+  },function(error){
+    console.log(error);
+  });
 
 });

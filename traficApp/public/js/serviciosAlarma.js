@@ -3,25 +3,21 @@ angular.module('AlarmaService', ['firebase'])
 
   .service('Alarmas',['$firebaseArray',
     function($firebaseArray){
-      var ref = firebase.database().ref('alarmas/');
-      var alarmas = $firebaseArray(ref);
+      this.ref = firebase.database().ref('alarmas/');
+      this.alarmas = $firebaseArray(this.ref);
 
-      this.cargarAlarma = cargarAlarma;
-      this.getAlarmas = getAlarmas;
+      this.cargarAlarma = function(objeto){
+          this.alarmas.$add(objeto).then(function(ref){
+                var id = ref.key;
+                console.log("Se agrego el id " + id);
+          });
+      };
 
-
-      function cargarAlarma(objeto){
-        return alarmas.$add(objeto).then(function(ref){
-            return ref.key;
-          })
-          .catch(function(e){
-            return e;
-          })
-      }
-
-      function getAlarmas(){
-        return alarmas;
-      }
+      this.getAlarmas = function(){
+            return this.alarmas.$loaded().then(function(datos){
+                  return datos;
+              })
+          };
     }]);
 
 
